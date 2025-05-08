@@ -1,12 +1,12 @@
 pipeline {
   agent { label 'slave' }
   environment {
-    IMAGE = "YOUR_DOCKERHUB_USER/hello-jenkins"
+    IMAGE = "rameshdurgam115/hello-jenkins"
   }
   stages {
     stage('Checkout') {
       steps {
-        git url: 'https://github.com/YOUR_USER/hello-jenkins.git', branch: 'main'
+        git url: 'https://github.com/rameshdurgam115/hello-jenkins.git', branch: 'main'
       }
     }
     stage('Build Image') {
